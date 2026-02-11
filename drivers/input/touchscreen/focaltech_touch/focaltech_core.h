@@ -210,14 +210,12 @@ struct fts_ts_data {
 	struct notifier_block bl_notif;
 	struct work_struct power_supply_work;
 	int is_usb_exist;
-#ifdef CONFIG_TOUCHSCREEN_FTS_FOD
 	int fod_status;
 	bool finger_in_fod;
 	bool fod_finger_skip;
 	int overlap_area;
 	struct mutex fod_mutex;
 	bool point_id_changed;
-#endif
 	struct class *fts_tp_class;
 	struct device *fts_touch_dev;
 #ifdef CONFIG_TOUCHSCREEN_XIAOMI_TOUCHFEATURE
